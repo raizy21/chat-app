@@ -10,3 +10,4 @@ dotenv.config({ path: path.resolve(__dirname, "../../../.env") });
 
 // export all your config vars
 export const PORT = process.env.PORT || 5001;
+export const MONGODB_URI = process.env.MONGODB_URI;
