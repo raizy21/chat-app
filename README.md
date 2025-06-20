@@ -18,7 +18,7 @@ backend:
 - mongodb (mongoose)
 - socket.io
 
-## frontend dev dependencies
+## frontend dependencies
 
 - eslint
 - tailwindcss
