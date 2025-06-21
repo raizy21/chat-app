@@ -4,6 +4,7 @@ import authRoutes from "./routes/auth.route.js"; // import authentication routes
 import { connectDB } from "./lib/db.js"; // import the database connection function
 
 const app = express(); // create an instance of express
+app.use(express.json()); // middleware to parse JSON bodies
 
 app.get("/", (req, res) => {
   res.send("app is running...");
