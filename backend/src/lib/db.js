@@ -7,16 +7,11 @@ export const connectDB = async () => {
     process.exit(1);
   }
 
-  mongoose
-    .connect(MONGODB_URI)
-    .then(() => console.log("connected"))
-    .catch((err) => console.log("auth error:", err.message));
-
   try {
     const conn = await mongoose.connect(MONGODB_URI);
-    // console.log(`mongo db connected: ${conn.connection.host}`);
+    console.log(`mongo db connected: ${conn.connection.host}`);
   } catch (error) {
-    console.error(`error: ${error.message}`);
+    console.error(`auth error: ${error.message}`);
     process.exit(1);
   }
 };
