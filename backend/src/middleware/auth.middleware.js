@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
-import { JWT_SECRET } from "../config/config";
+import { JWT_SECRET } from "../config/config.js";
 
 export const protectRoute = async (req, res, next) => {
   try {
