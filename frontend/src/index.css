@@ -52,3 +52,7 @@ main {
   width: 80%;
   margin: 0.3rem auto;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
