@@ -1,6 +1,7 @@
 import express from "express"; // import express for creating the server
 import { PORT } from "./config/config.js"; // import the PORT from config
 import authRoutes from "./routes/auth.route.js"; // import authentication routes
+import messageRoutes from "./routes/message.route.js"; // import message handling routes
 import cookieParser from "cookie-parser"; // import cookie parser to handle cookies
 import { connectDB } from "./lib/db.js"; // import the database connection function
 
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", authRoutes); // use auth routes for authentication
+app.use("/api/messages", messageRoutes); // use message routes for handling messages
 
 app.listen(PORT, () => {
   // set the server to listen on port specified in config
