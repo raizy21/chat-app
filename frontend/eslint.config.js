@@ -22,6 +22,7 @@ export default [
     },
     rules: {
       "react/propt-types": "off",
+      "no-unused-vars": "off",
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
